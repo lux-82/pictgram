@@ -1,9 +1,13 @@
 spring:
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:pictgram
-    username: sa
-    password: 
+    #driver-class-name: org.h2.Driver
+    #url: jdbc:h2:mem:pictgram
+    #username: sa
+    #password:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/pictgram
+    username: board
+    password: password
 
   h2:
     console:
@@ -13,8 +17,6 @@ spring:
     multipart:
       max-file-size: 20MB
       max-request-size: 20MB
-  
-
 
 cloud:
   aws:
@@ -26,3 +28,4 @@ cloud:
       
 onesignal:
   id: ${onesignal.id}
+  
